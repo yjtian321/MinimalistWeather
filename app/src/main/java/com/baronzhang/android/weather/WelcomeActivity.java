@@ -21,11 +21,12 @@ import rx.schedulers.Schedulers;
  */
 public class WelcomeActivity extends BaseActivity {
 
+    public final String TAG = "WelcomeActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        StatusBarHelper.statusBarLightMode(this);
+        StatusBarHelper.statusBarLightMode(this);  
 
         Observable.just(initAppData())
                 .subscribeOn(Schedulers.io())
